@@ -1,0 +1,4 @@
+tensorflow
+pydantic
+numpy
+Pillow
