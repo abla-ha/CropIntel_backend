@@ -5,6 +5,21 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import io
+import tarfile
+import os
+
+# Define the path to the tar.gz file and the directory to extract to
+tar_path = 'app/services/model/model.tar.gz'
+extract_to = 'app/services/model/'
+
+# Extract the tar.gz file
+if not os.path.exists(extract_to):
+    os.makedirs(extract_to)
+
+with tarfile.open(tar_path, 'r:gz') as tar:
+    tar.extractall(path=extract_to)
+
+
 
 # Load the model once when the module is imported
 model = tf.keras.models.load_model('app/services/model/trained_plant_disease_model.keras')
