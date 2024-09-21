@@ -54,7 +54,7 @@ pandas==2.2.2
 passlib==1.7.4
 pillow==10.4.0
 proto-plus==1.24.0
-protobuf>=3.20.2,<6.0.0  # Ensure compatibility
+protobuf
 pyasn1==0.6.0
 pyasn1_modules==0.4.1
 pydantic
