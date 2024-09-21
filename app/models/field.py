@@ -6,10 +6,10 @@ class CropField(Base):
     __tablename__ = 'crop_fields'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    user_id = Column(Integer, nullable=False)  # Assuming user_id references a User table
+    user_id = Column(Integer, nullable=False)  
     field_name = Column(String(255), nullable=False)
     location = Column(String(255), nullable=False)
-    area = Column(Float, nullable=False)  # Area in appropriate unit (e.g., hectares)
+    area = Column(Float, nullable=False) 
     harvest_date = Column(Date, nullable=False)
 
     def __repr__(self):
